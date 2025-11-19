@@ -1,0 +1,350 @@
+:root {
+    --primary-color: #FFD700; /* Gold/Yellow for CTAs and highlights */
+    --secondary-color: #000000; /* Main text color */
+    --background-color: #FFFFFF;
+    --dark-background: #1a1a1a; /* For contrast sections */
+    --accent-color: #A0522D; /* Sienna/Brown for a rich feel */
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --spacing-large: 40px;
+    --spacing-medium: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    padding: 0;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: var(--spacing-medium);
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: var(--spacing-medium);
+    text-align: center;
+}
+
+.pre-headline {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Header/Hero Section */
+.hero-section {
+    background-color: var(--dark-background);
+    color: #ffffff;
+    padding: var(--spacing-large) var(--spacing-medium);
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    line-height: 1.1;
+    margin-top: 15px;
+}
+
+.hero-image {
+    background-color: #333;
+    height: 300px;
+    margin: var(--spacing-medium) auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-style: italic;
+    max-width: 800px;
+}
+
+.story-box {
+    background: #2b2b2b;
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+    margin: var(--spacing-medium) 0;
+    text-align: left;
+}
+
+.story-headline {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+/* CTA Buttons */
+.cta-button {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: var(--spacing-medium) auto;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primary-cta {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.primary-cta:hover {
+    background-color: #e6c500;
+}
+
+.secondary-cta {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: 3px solid var(--accent-color);
+}
+
+.secondary-cta:hover {
+    background-color: #8c4627;
+}
+
+.mini-cta-quote {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    margin: var(--spacing-medium) 0;
+    font-style: italic;
+}
+
+/* Main Content Sections */
+.section {
+    padding: var(--spacing-large) var(--spacing-medium);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-columns {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+    .content-columns {
+        flex-direction: row;
+        text-align: left;
+    }
+    .column-left {
+        flex: 2;
+    }
+    .column-right {
+        flex: 1;
+    }
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: var(--spacing-medium);
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.highlight-box {
+    background-color: #fffbe6;
+    border: 1px solid var(--primary-color);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.image-placeholder {
+    background-color: #ccc;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Goldmine Section Specific */
+.goldmine-section {
+    background-color: #fff8e1; /* Light gold background */
+    text-align: center;
+}
+
+.goldmine-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: var(--spacing-medium);
+}
+
+.goldmine-list p {
+    background-color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Price Section */
+.price-section {
+    text-align: center;
+    background-color: var(--dark-background);
+    color: #ffffff;
+}
+
+.price-section h2 {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.price-box {
+    margin: var(--spacing-medium) auto;
+    padding: var(--spacing-medium);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 1.1em;
+}
+
+.total-price {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #555;
+}
+
+.sale-price {
+    font-size: 2em;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.value-list {
+    list-style-type: '✅ ';
+    text-align: left;
+    display: inline-block;
+}
+
+/* Testimonials */
+.testimonials-section {
+    background-color: #f4f4f4;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 600px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.testimonial-card {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+    color: var(--accent-color);
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    text-align: center;
+}
+
+.bold-message {
+    font-size: 1.3em;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.final-quote {
+    background-color: var(--primary-color);
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: var(--spacing-large) auto;
+    border-radius: 10px;
+    max-width: 600px;
+    color: var(--secondary-color);
+}
+
+.final-cta {
+    margin-top: 40px;
+    font-size: 1.5em;
+    padding: 20px 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/* Additional specific styles */
+.highlight-text {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.1em;
+}
+
+.bonus-text {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
